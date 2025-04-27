@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/servicebackground"
+    tools:context=".Health">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Breed Name -->
+        <TextView
+            android:id="@+id/breedTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Breed: Beagle"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Health Tips Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/healthTipsCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/breedTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/healthTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Regular ear cleaning\n• Daily exercise\n• Watch for obesity\n• Use vet-approved flea meds\n• Annual vaccinations"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:padding="16dp"
+                android:textColor="#37474F"
+                android:background="#A5D6A7" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Doctor Image -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageCard"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/healthTipsCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/doctorImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/doctor_placeholder"
+                android:scaleType="centerCrop"
+                android:contentDescription="Doctor Image" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Doctor Info Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/doctorInfoCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/imageCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/doctorInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr. Sneha Rao\nVeterinary Specialist\nContact: +91 9876543210"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:padding="16dp"
+                android:textColor="#37474F"
+                android:textAlignment="center"
+                android:background="#FFE082" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Call Doctor Button -->
+        <Button
+            android:id="@+id/callDoctorBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call Doctor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:backgroundTint="#E53935"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/doctorInfoCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

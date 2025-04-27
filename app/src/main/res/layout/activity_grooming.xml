@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/servicebackground"
+    android:padding="16dp"
+    tools:context=".Grooming">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/groomingTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="✨ Grooming Tips ✨"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#004D40"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Grooming Image -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/groomingTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <ImageView
+            android:id="@+id/groomingImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="Grooming Image" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Grooming Steps -->
+    <TextView
+        android:id="@+id/groomingSteps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="• Brush regularly to reduce shedding\n• Bathe monthly with mild shampoo\n• Trim nails every 2–4 weeks\n• Clean ears gently\n• Use a pet-friendly comb for knots"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="6dp"
+        android:lineSpacingExtra="6dp"
+        android:textColor="#37474F"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="4dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/imageCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
